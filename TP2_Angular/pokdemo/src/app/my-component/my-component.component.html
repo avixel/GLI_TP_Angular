@@ -1,0 +1,18 @@
+Filtre : <input [(ngModel)]="filtre">
+<button (click)="pipePoke()">Ok!</button>
+
+<br/><br/>
+<input [(ngModel)]="id">
+<!--{{id}}-->
+<input [(ngModel)]="id" disabled="disabled">
+<br/>
+<select [(ngModel)]="id">
+    <option *ngFor="let pk of pokemons" 
+    [value]="pk.id" 
+    [attr.selected]="pk.name">
+  {{pk.name}}
+</option>
+</select>
+
+<br/><br/>
+<mat-slider min="1" max="100" step="1"  value="50"></mat-slider>
